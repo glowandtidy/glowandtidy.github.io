@@ -156,7 +156,6 @@
             margin-right: auto;
         }
         
-        
         .image-gallery {
             display: flex;
             overflow-x: auto;
@@ -166,13 +165,6 @@
             scrollbar-color: #667eea #f1f1f1;
         }
         
-/*
-        .image-gallery {
-            display: columns;
-            column-count: 3;
-            column-gap: 1rem;
-        }
-*/
         .image-gallery::-webkit-scrollbar {
             height: 8px;
         }
@@ -204,14 +196,14 @@
         
         .gallery-item img {
             width: 100%;
-            height: 500px;
+            height: 200px;
             object-fit: cover;
             display: block;
             transition: transform 0.5s;
         }
         
         .gallery-item:hover img {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         
         .gallery-caption {
@@ -257,7 +249,7 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            height: 400px;
+            height: 250px;
         }
         
         .hover-item img {
@@ -295,7 +287,7 @@
         /* Contact section */
         .contact-section {
             max-width: 800px;
-            margin: 2rem auto;
+            margin: 4rem auto;
             padding: 0 2rem;
         }
         
@@ -308,7 +300,7 @@
         
         .contact-card {
             background: white;
-            padding: 1rem;
+            padding: 3rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-align: center;
@@ -356,11 +348,7 @@
             }
             
             .gallery-item {
-                width: 300px;
-            }
-
-            .gallery-item img {
-                height: 300px; /* Shorter on mobile for better UX */
+                width: 250px;
             }
         }
     </style>
@@ -373,6 +361,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#hover-gallery">Before/After</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -407,50 +396,86 @@
     <!-- Horizontal Scrolling Gallery -->
     <section class="gallery-container" id="gallery">
         <h2>Our Work Gallery</h2>
-        <!--p class="gallery-intro">Scroll horizontally to view more images of our professional cleaning services in action</p-->
+        <p class="gallery-intro">Scroll horizontally to view more images of our professional cleaning services in action</p>
         
         <div class="image-gallery">
             <div class="gallery-item">
-                <img src="images/gt_carpet_cleaning.jpg" alt="Carpet Cleaning">
-                <!--div class="gallery-caption">Carpet Steam Cleaning</div-->
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Carpet Cleaning">
+                <div class="gallery-caption">Carpet Steam Cleaning</div>
             </div>
             
             <div class="gallery-item">
-                <img src="images/gt_window_cleaning.jpg" alt="Window Cleaning">
-                <!--div class="gallery-caption">Window Cleaning</div-->
+                <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Window Cleaning">
+                <div class="gallery-caption">Window Cleaning</div>
             </div>
             
             <div class="gallery-item">
-                <img src="images/gt_vacuuming.jpg" alt="Vacuuming">
-                <!--div class="gallery-caption">Professional Vacuuming</div-->
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Vacuuming">
+                <div class="gallery-caption">Professional Vacuuming</div>
             </div>
             
             <div class="gallery-item">
-                <img src="images/gt_window_cleaning_2.jpg" alt="Office Cleaning">
-                <!--div class="gallery-caption">Office Cleaning</div-->
-            </div>
-            
-            <div class="gallery-item">
-                <img src="images/gt_cleaning.jpg" alt="Deep Cleaning">
-                <!--div class="gallery-caption">Deep Cleaning</div-->
-            </div>
-            <!--
-            <div class="gallery-item">
-                <img src="" alt="Office Cleaning">
+                <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Office Cleaning">
                 <div class="gallery-caption">Office Cleaning</div>
             </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Kitchen Cleaning">
+                <div class="gallery-caption">Kitchen Deep Cleaning</div>
+            </div>
+            
             <div class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Bathroom Cleaning">
                 <div class="gallery-caption">Bathroom Sanitization</div>
             </div>
             
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Upholstery Cleaning">
+                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Upholstery Cleaning">
                 <div class="gallery-caption">Upholstery Cleaning</div>
             </div>
-        -->
         </div>
-    </section>    
+    </section>
+    
+    <!-- Hover Effect Gallery -->
+    <section class="hover-gallery" id="hover-gallery">
+        <h2>Before & After Effects</h2>
+        <p class="hover-gallery-intro">Hover over each image to see transformation details</p>
+        
+        <div class="hover-container">
+            <div class="hover-item">
+                <img src="https://images.unsplash.com/photo-1611602134776-2b19b2e5a2a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Before Cleaning">
+                <div class="hover-overlay">
+                    <h3>Before Cleaning</h3>
+                    <p>Heavily soiled carpet with visible stains and dirt accumulation</p>
+                </div>
+            </div>
+            
+            <div class="hover-item">
+                <img src="https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="After Cleaning">
+                <div class="hover-overlay">
+                    <h3>After Cleaning</h3>
+                    <p>Deep cleaned carpet with stains removed and fibers revitalized</p>
+                </div>
+            </div>
+            
+            <div class="hover-item">
+                <img src="https://images.unsplash.com/photo-1623298317882-8e6a7d21e8b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Window Before">
+                <div class="hover-overlay">
+                    <h3>Before Window Cleaning</h3>
+                    <p>Windows with water spots, streaks, and accumulated grime</p>
+                </div>
+            </div>
+            
+            <div class="hover-item">
+                <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Window After">
+                <div class="hover-overlay">
+                    <h3>After Window Cleaning</h3>
+                    <p>Crystal clear windows with no streaks or water spots</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <h2>Contact Us</h2>
@@ -461,6 +486,7 @@
                 <p><strong>Phone:</strong> 0451 073 760 or 0416 396 106</p>
                 <p><strong>Service Areas:</strong> Parramatta, North West, Penrith, and surrounding Sydney West areas</p>
             </div>
+            <a href="mailto:deepaniruhunu@gmail.com" class="btn">Send Us an Email</a>
         </div>
     </section>
     
